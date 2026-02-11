@@ -1,7 +1,6 @@
 services:
     - type: web
-      plan: free
-      name: mysite
-      runtime: python
+      name: django-app
+      env: python
       buildCommand: "./build.sh"
-      startCommand: "python -m gunicorn book_store.asgi:application -k uvicorn.workers.UvicornWorker"
+      startCommand: "gunicorn book_store.wsgi:application"
