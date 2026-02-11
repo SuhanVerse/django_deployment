@@ -5,4 +5,4 @@ pip install -r requirements.txt
 
 python manage.py collectstatic --no-input
 
-python manage.py migratepip install gunicorn uvicorn
+python manage.py migrate install gunicorn uvicorn
