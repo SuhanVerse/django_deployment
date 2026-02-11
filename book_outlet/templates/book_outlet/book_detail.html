@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Book outlet store" />
+        <meta name="keywords" content="books, store, outlet" />
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>{{ book.title }}</h1>
+        <p>Rating: {{ book.rating }}/5</p>
+        <p>Author: {{ book.author }}</p>
+        <p>
+            Bestselling:
+            {% if book.is_bestselling %}
+                Yes
+            {% else %}
+                No
+            {% endif %}
+        </p>
+        <a href="{% url 'index' %}">Back to Books</a>
+    </body>
+</html>

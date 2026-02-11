@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Book Store Registration Page">
+        <meta name="keywords" content="registration, book store">
+        <title>Document</title>
+    </head>
+    <body>
+        <form method='post' action='{% url 'registration:form' %}'>
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type='submit'>Register</button>
+        </form>
+    </body>
+</html>

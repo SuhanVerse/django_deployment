@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Book outlet store" />
+        <meta name="keywords" content="books, store, outlet" />
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>Book Store</h1>
+        <ul>
+            {% for book in books %}
+                <li>
+                    <a href="{% url 'book_detail' book.id %}">{{ book.title }} (Rating: {{ book.rating }})</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>
